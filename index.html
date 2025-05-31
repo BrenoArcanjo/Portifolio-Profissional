@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalita Ágata | One Beleza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'one-primary': '#FF6B6B',
+                        'one-secondary': '#4ECDC4',
+                        'one-dark': '#292F36',
+                        'one-light': '#F7FFF7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,107,107,0.8) 0%, rgba(78,205,196,0.8) 100%);
+        }
+        .skill-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e0e0e0;
+        }
+        .skill-progress {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #FF6B6B 0%, #4ECDC4 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="bg-one-light text-one-dark font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="https://via.placeholder.com/50" alt="One Beleza Logo" class="h-10 mr-3">
+                    <span class="text-xl font-bold text-one-primary">One Beleza</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-one-dark hover:text-one-primary font-medium">Sobre</a>
+                    <a href="#services" class="text-one-dark hover:text-one-primary font-medium">Serviços</a>
+                    <a href="#skills" class="text-one-dark hover:text-one-primary font-medium">Habilidades</a>
+                    <a href="#contact" class="text-one-dark hover:text-one-primary font-medium">Contato</a>
+                </nav>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-one-dark"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <img src="https://via.placeholder.com/400x500" alt="Thalita Ágata" class="rounded-lg shadow-xl mx-auto w-64 md:w-80">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Thalita Ágata Domingos da Silva</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-white mb-6">Suporte Técnico | One Beleza</h2>
+                <p class="text-white text-lg mb-8 max-w-lg mx-auto md:mx-0">
+                    Especialista em treinamentos e soluções técnicas que contribuem para o sucesso de milhares de clientes.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-white text-one-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition duration-300 shadow-md">
+                        <i class="fas fa-envelope mr-2"></i> Contato
+                    </a>
+                    <a href="#services" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-one-primary transition duration-300 shadow-md">
+                        <i class="fas fa-info-circle mr-2"></i> Saiba Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-one-dark mb-16">Sobre Mim</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold text-one-primary mb-4">Minha Jornada na One Beleza</h3>
+                    <p class="text-gray-700 mb-6">
+                        Como profissional de suporte técnico na One Beleza, dedico-me diariamente a resolver problemas complexos e capacitar nossos clientes através de treinamentos especializados.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Minha abordagem combina conhecimento técnico aprofundado com habilidades de comunicação excepcionais, garantindo que cada interação seja produtiva e satisfatória.
+                    </p>
+                    <p class="text-gray-700">
+                        Acredito que o sucesso do cliente é o nosso sucesso, e é por isso que me comprometo a oferecer soluções personalizadas que atendam às necessidades específicas de cada caso.
+                    </p>
+                </div>
+                <div class="md:w-1/2 bg-one-light p-8 rounded-lg shadow-lg hover-scale">
+                    <h3 class="text-2xl font-semibold text-one-secondary mb-6">Principais Realizações</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-one-primary text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-one-dark">Treinamento de +1000 Clientes</h4>
+                                <p class="text-gray-600">Capacitação efetiva de mais de mil clientes em todo o Brasil.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-one-secondary text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-one-dark">95% de Satisfação</h4>
+                                <p class="text-gray-600">Taxa de satisfação do cliente consistentemente acima de 95%.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-one-primary text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-one-dark">Soluções Inovadoras</h4>
+                                <p class="text-gray-600">Desenvolvimento de metodologias inovadoras para resolução de problemas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-one-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-one-dark mb-16">Serviços Especializados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <div class="bg-one-primary text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-chalkboard-teacher text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-one-dark mb-4">Treinamentos Técnicos</h3>
+                    <p class="text-gray-700 text-center">
+                        Capacitação personalizada para equipes e clientes, garantindo o máximo aproveitamento dos produtos e serviços One Beleza.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <div class="bg-one-secondary text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-one-dark mb-4">Suporte Especializado</h3>
+                    <p class="text-gray-700 text-center">
+                        Soluções rápidas e eficientes para problemas técnicos, com abordagem humanizada e foco na experiência do cliente.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <div class="bg-one-primary text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-one-dark mb-4">Otimização de Processos</h3>
+                    <p class="text-gray-700 text-center">
+                        Análise e melhoria contínua de fluxos de trabalho para aumentar a eficiência e satisfação dos clientes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-one-dark mb-16">Minhas Habilidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <!-- Left Column -->
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Suporte Técnico</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Treinamentos</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Resolução de Problemas</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Comunicação</span>
+                            <span>94%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 94%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Produtos One Beleza</span>
+                            <span>97%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 97%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Atendimento ao Cliente</span>
+                            <span>96%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 96%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Skills -->
+            <div class="mt-16 max-w-4xl mx-auto">
+                <h3 class="text-xl font-semibold text-center text-one-primary mb-8">Outras Competências</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-one-light px-4 py-2 rounded-full font-medium">Pacote Office</span>
+                    <span class="bg-one-light px-4 py-2 rounded-full font-medium">Sistemas CRM</span>
+                    <span class="bg-one-light px-4 py-2 rounded-full font-medium">Gestão de Conflitos</span>
+                    <span class="bg-one-light px-4 py-2 rounded-full font-medium">Análise de Dados</span>
+                    <span class="bg-one-light px-4 py-2 rounded-full font-medium">Metodologias Ágeis</span>
+                    <span class="bg-one-light px-4 py-2 rounded-full font-medium">Plataformas EAD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-one-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-one-dark mb-16">Depoimentos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <div class="flex items-center mb-6">
+                        <img src="https://via.placeholder.com/60" alt="Cliente" class="rounded-full w-12 h-12 mr-4">
+                        <div>
+                            <h4 class="font-bold">Ana Carolina</h4>
+                            <p class="text-gray-600 text-sm">Gerente de Salão</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Thalita transformou nossa equipe com seus treinamentos. Nunca tivemos um suporte tão dedicado e eficiente. Recomendo sem hesitar!"
+                    </p>
+                    <div class="mt-4 text-one-primary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <div class="flex items-center mb-6">
+                        <img src="https://via.placeholder.com/60" alt="Cliente" class="rounded-full w-12 h-12 mr-4">
+                        <div>
+                            <h4 class="font-bold">Roberto Almeida</h4>
+                            <p class="text-gray-600 text-sm">Proprietário de Rede</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "O conhecimento técnico da Thalita é impressionante. Resolveu em minutos um problema que nos atormentava há semanas. Profissional nota 10!"
+                    </p>
+                    <div class="mt-4 text-one-primary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <div class="flex items-center mb-6">
+                        <img src="https://via.placeholder.com/60" alt="Cliente" class="rounded-full w-12 h-12 mr-4">
+                        <div>
+                            <h4 class="font-bold">Juliana Mendes</h4>
+                            <p class="text-gray-600 text-sm">Empreendedora</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "A abordagem didática da Thalita fez toda a diferença no nosso uso dos produtos One Beleza. Agora nossa equipe trabalha com muito mais eficiência."
+                    </p>
+                    <div class="mt-4 text-one-primary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-one-dark mb-16">Entre em Contato</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold text-one-primary mb-6">Informações de Contato</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-one-primary text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Telefone Comercial</h4>
+                                <p class="text-gray-700">+55 31 8944-5797</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-one-secondary text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Email Corporativo</h4>
+                                <p class="text-gray-700">thalita.agata@onebeleza.com.br</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-one-primary text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Horário Comercial</h4>
+                                <p class="text-gray-700">Segunda a Sexta, 9h às 18h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <h4 class="font-bold text-lg mb-4">Conecte-se Comigo</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-one-primary text-white p-3 rounded-full w-12 h-12 flex items-center justify-center hover:bg-one-dark transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-one-secondary text-white p-3 rounded-full w-12 h-12 flex items-center justify-center hover:bg-one-dark transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-one-primary text-white p-3 rounded-full w-12 h-12 flex items-center justify-center hover:bg-one-dark transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="bg-one-light p-8 rounded-lg shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-one-primary">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-one-primary">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                            <select id="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-one-primary">
+                                <option value="">Selecione um assunto</option>
+                                <option value="support">Suporte Técnico</option>
+                                <option value="training">Treinamento</option>
+                                <option value="consulting">Consultoria</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-one-primary"></textarea>
+                        </div>
+                        <button type="submit" class="bg-one-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-one-dark transition duration-300 w-full">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-one-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="One Beleza Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold">One Beleza</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">Soluções técnicas que transformam negócios.</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="mb-4">© 2023 Thalita Ágata Domingos da Silva. Todos os direitos reservados.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-one-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile Menu Toggle (would need additional implementation)
+        const mobileMenuButton = document.querySelector('button.md\\:hidden');
+        mobileMenuButton.addEventListener('click', () => {
+            // This would need a proper mobile menu implementation
+            alert('Mobile menu would open here');
+        });
+
+        // Form submission (example)
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Obrigado pela sua mensagem! Entrarei em contato em breve.');
+                form.reset();
+            });
+        }
+    </script>
+</body>
+</html>
